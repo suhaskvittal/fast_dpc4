@@ -16,8 +16,9 @@ GOOGLE_TRACES = ['Google_v2/arizona',
                   'Google_v2/tango',
                   'Google_v2/yankee'
                  ]
+GRAPH_TRACES = ['Graph/GAP', 'Graph/GMS', 'Graph/Ligra']
 
-TRACES = [*GOOGLE_TRACES]
+TRACES = [*GOOGLE_TRACES, 'AI-ML', *GRAPH_TRACES, 'SPEC2017']
 
 #################################
 #################################
@@ -44,7 +45,6 @@ def run_for_policy(policy: str):
     os.system(f'mkdir -p {output_folder}')
     conf_exe_name = conf.replace('.', '_')
     exe_name = f'{policy}_{conf_exe_name}'
-    print(exe_name)
 
     exe = f'./bin/{exe_name}'
 
@@ -54,7 +54,6 @@ def run_for_policy(policy: str):
 
         for f in os.listdir(trace_folder):
             if not f.endswith('.gz') and not f.endswith('.xz'):
-                print(f'\tskipping {f}')
                 continue
 
             trace_file = f'{trace_folder}/{f}'
