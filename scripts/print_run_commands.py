@@ -18,7 +18,21 @@ GOOGLE_TRACES = ['Google_v2/arizona',
                  ]
 GRAPH_TRACES = ['Graph/GAP', 'Graph/GMS', 'Graph/Ligra']
 
-TRACES = [*GOOGLE_TRACES, 'AI-ML', *GRAPH_TRACES, 'SPEC2017']
+#TRACES = [*GOOGLE_TRACES, 'AI-ML', *GRAPH_TRACES, 'SPEC17']
+TRACES = ['AI-ML', *GRAPH_TRACES]
+
+#################################
+#################################
+
+def get_name(filename: str, suite: str) -> str:
+    left, right = 0, filename.find('.champsim')
+    if suite == 'SPEC17':
+        left = len('6xx.')
+        right = filename.find('.champsimtrace.xz')
+    elif suite == 'Graph/GAP':
+        right = filename.find('.trace.gz')
+
+    return filename[left:right]
 
 #################################
 #################################
@@ -57,7 +71,7 @@ def run_for_policy(policy: str):
                 continue
 
             trace_file = f'{trace_folder}/{f}'
-            name = f[:f.find('.')]
+            name = get_name(f, trace_folder_name)
 
             output_path = f'{output_folder}/{trace_folder_name}/{name}.out'
             
