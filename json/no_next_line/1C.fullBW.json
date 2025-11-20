@@ -78,7 +78,7 @@
     "minor_fault_penalty": 200,
     "randomization": 1
   },
-  "executable_name": "1C.fullBW",
+  "executable_name": "no_next_line_1C_fullBW",
   "num_cores": 1,
   "ooo_cpu": [
     {

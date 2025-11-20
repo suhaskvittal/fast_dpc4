@@ -282,19 +282,19 @@ def main():
     configs = [
         {
             'filename': '1C.fullBW.json',
-            'executable_name': '1C.fullBW',
+            'executable_name': f'{args.l1pref}_{args.l2pref}_1C_fullBW',
             'num_cores': 1,
             'limited_bw': False
         },
         {
             'filename': '1C.limitBW.json',
-            'executable_name': '1C.limitBW',
+            'executable_name': f'{args.l1pref}_{args.l2pref}_1C.limitBW',
             'num_cores': 1,
             'limited_bw': True
         },
         {
             'filename': '4C.json',
-            'executable_name': '4C',
+            'executable_name': f'{args.l1pref}_{args.l2pref}_4C',
             'num_cores': 4,
             'limited_bw': False
         }

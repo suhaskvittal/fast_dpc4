@@ -78,7 +78,7 @@
     "minor_fault_penalty": 200,
     "randomization": 1
   },
-  "executable_name": "berti_spp_dev_1Cfull",
+  "executable_name": "berti_spp_dev_1C_fullBW",
   "num_cores": 1,
   "ooo_cpu": [
     {

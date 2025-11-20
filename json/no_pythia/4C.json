@@ -78,7 +78,7 @@
     "minor_fault_penalty": 200,
     "randomization": 1
   },
-  "executable_name": "4C",
+  "executable_name": "no_pythia_4C",
   "num_cores": 4,
   "ooo_cpu": [
     {
