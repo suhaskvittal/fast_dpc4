@@ -30,3 +30,8 @@ compile_commands.json
 
 .vscode/
 **/.DS_Store
+
+*.tar.gz
+out/*
+commands.out
+commands.txt
