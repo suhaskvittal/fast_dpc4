@@ -2,6 +2,8 @@ import os
 
 THREADS = 16
 
+os.system('rm bin/*')
+
 for f in os.listdir('json'):
     if not os.path.isdir(f'json/{f}'):
         continue

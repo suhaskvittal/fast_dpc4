@@ -288,7 +288,7 @@ def main():
         },
         {
             'filename': '1C.limitBW.json',
-            'executable_name': f'{args.l1pref}_{args.l2pref}_1C.limitBW',
+            'executable_name': f'{args.l1pref}_{args.l2pref}_1C_limitBW',
             'num_cores': 1,
             'limited_bw': True
         },
